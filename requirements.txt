@@ -1,0 +1,9 @@
+torch
+numpy
+lightning==2.0.0
+torchvision
+albumentations
+pandas
+rasterio
+matplotlib
+torchgeo
