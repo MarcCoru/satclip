@@ -282,6 +282,10 @@ class SatCLIP(nn.Module):
                 width=vision_width,
                 in_channels=in_channels
             )
+
+        elif vision_layers == 'resnet18':
+            print('using resnet18')
+            self.visual = timm.create_model("resnet18", in_chans=in_channels, num_classes=embed_dim)
             
         elif vision_layers == 'moco_resnet18':
             print('using pretrained moco resnet18')

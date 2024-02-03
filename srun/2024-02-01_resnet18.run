@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --time=12:00:00
+#SBATCH --mem=128G
+#SBATCH --cpus-per-task=24
+#SBATCH --job-name=train.py
+#SBATCH --gres=gpu:1
+#SBATCH --partition=gpu
+
+PYTHON=/home/WUR/russw001/satclip/venv/bin/python
+
+srun $PYTHON satclip/main.py \
+  --config /home/WUR/russw001/satclip/satclip/configs/resnet-18.yaml

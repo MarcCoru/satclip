@@ -11,5 +11,4 @@ module load python
 PYTHON=/home/WUR/russw001/satclip/venv/bin/python
 
 srun $PYTHON satclip/main.py \
-  --config /home/WUR/russw001/satclip/satclip/configs/default.yaml \
-  --data.data_dir /scratch/WUR/ESG/russw001/S2-100k
+  --config /home/WUR/russw001/satclip/satclip/configs/default.yaml

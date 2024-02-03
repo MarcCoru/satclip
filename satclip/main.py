@@ -151,9 +151,9 @@ if __name__ == "__main__":
     config_fn = "./configs/default.yaml"
 
     #A100 go vroom vroom 🚗💨
-    #if torch.cuda.get_device_name(device=0)=='NVIDIA A100 80GB PCIe':
-    #    torch.backends.cuda.matmul.allow_tf32 = True
-    #    print('Superfastmode! 🚀')
-    #else:
-    #    torch.backends.cuda.matmul.allow_tf32 = False
+    if torch.cuda.get_device_name(device=0)=='NVIDIA A100 80GB PCIe':
+        torch.backends.cuda.matmul.allow_tf32 = True
+        print('Superfastmode! 🚀')
+    else:
+        torch.backends.cuda.matmul.allow_tf32 = False
     cli_main(config_fn)
